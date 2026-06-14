@@ -1,56 +1,43 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Ecommerce Project</title>
 
-    <!-- This code is needed for responsive design to work.
-      (Responsive design = make the website look good on
-      smaller screen sizes like a phone or a tablet). -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+import './header.css';
+import './HomePage.css';
 
-    <!-- Load a font called Roboto from Google Fonts. -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+export function HomePage() {
+    return (
+        <>
+            <div className="header">
+                <div className="left-section">
+                    <a href="index.html" className="header-link">
+                        <img className="logo"
+                            src="images/logo-white.png" />
+                        <img className="mobile-logo"
+                            src="images/mobile-logo-white.png" />
+                    </a>
+                </div>
 
-    <!-- Here are the CSS files for this page. -->
-    <link rel="stylesheet" href="styles/shared/header.css">
-    <link rel="stylesheet" href="styles/pages/index.css">
-  </head>
-  <body>
-    <div class="header">
-      <div class="left-section">
-        <a href="index.html" class="header-link">
-          <img class="logo"
-            src="images/logo-white.png" />
-          <img class="mobile-logo"
-            src="images/mobile-logo-white.png" />
-        </a>
-      </div>
+                <div className="middle-section">
+                    <input className="search-bar" type="text" placeholder="Search" />
 
-      <div class="middle-section">
-        <input class="search-bar" type="text" placeholder="Search" />
+                    <button className="search-button">
+                        <img className="search-icon" src="images/icons/search-icon.png" />
+                    </button>
+                </div>
 
-        <button class="search-button">
-          <img class="search-icon" src="images/icons/search-icon.png" />
-        </button>
-      </div>
+                <div className="right-section">
+                    <a className="orders-link header-link" href="orders.html">
 
-      <div class="right-section">
-        <a class="orders-link header-link" href="orders.html">
+                        <span className="orders-text">Orders</span>
+                    </a>
 
-          <span class="orders-text">Orders</span>
-        </a>
+                    <a className="cart-link header-link" href="checkout.html">
+                        <img className="cart-icon" src="images/icons/cart-icon.png" />
+                        <div className="cart-quantity">3</div>
+                        <div className="cart-text">Cart</div>
+                    </a>
+                </div>
+            </div>
 
-        <a class="cart-link header-link" href="checkout.html">
-          <img class="cart-icon" src="images/icons/cart-icon.png" />
-          <div class="cart-quantity">3</div>
-          <div class="cart-text">Cart</div>
-        </a>
-      </div>
-    </div>
-
-    <div class="home-page">
+             <div class="home-page">
       <div class="products-grid">
         <div class="product-container">
           <div class="product-image-container">
@@ -200,5 +187,6 @@
         </div>
       </div>
     </div>
-  </body>
-</html>
+        </>
+    );
+}
